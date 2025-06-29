@@ -1,0 +1,259 @@
+/* Stile generale */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Intestazione */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a.btn {
+    background-color: #ff6f61;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: #e55a50;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Sezioni */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about, .menu, .contact {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Stile per la pagina Booking */
+
+/* Modulo di Prenotazione */
+.booking-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+#booking-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#booking-form label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    color: #333;
+}
+
+#booking-form input, #booking-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+#booking-form input:focus {
+    border-color: #ff6f61;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 111, 97, 0.5);
+}
+
+#booking-form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#booking-form button:hover {
+    background-color: #e55a50;
+}
+
+/* Messaggio di risposta */
+.response-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: green;
+}
+
+/* Stile per la sezione menu */
+.menu {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.menu-preview {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Aggiunta degli sfondi per i piatti */
+.menu-item:nth-child(1) {
+    background-image: url('/static/images/piatto1.jpg');
+}
+
+.menu-item:nth-child(2) {
+    background-image: url('/static/images/piatto2.jpg');
+}
+
+.menu-item:nth-child(3) {
+    background-image: url('/static/images/piatto3.jpg');
+}
+
+.reservations table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.reservations th, .reservations td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.reservations th {
+    background-color: #333;
+    color: white;
+}

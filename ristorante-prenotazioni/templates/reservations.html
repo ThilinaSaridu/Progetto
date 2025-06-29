@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazioni</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>La Buona Tavola</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/booking">Prenota</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="reservations">
+            <h2>Lista Prenotazioni</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Data</th>
+                        <th>Ora</th>
+                        <th>Ospiti</th>
+                    </tr>
+                </thead>
+                <tbody id="reservation-list">
+                    <!-- Prenotazioni verranno caricate qui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<script src="/static/js/reservations.js"></script>
+</html>
