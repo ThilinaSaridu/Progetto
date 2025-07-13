@@ -241,6 +241,7 @@ footer {
     background-image: url('/static/images/piatto3.jpg');
 }
 
+/*
 .reservations table {
     width: 100%;
     border-collapse: collapse;
@@ -257,3 +258,135 @@ footer {
     background-color: #333;
     color: white;
 }
+    */
+
+/* Container delle prenotazioni */
+/*
+.reservations-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+*/
+/* Titolo */
+/*
+.reservations-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+*/
+/* Tabella */
+/*
+.reservations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.reservations-table th,
+.reservations-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.reservations-table th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.reservations-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.reservations-table tr:hover {
+    background-color: #f1f1f1;
+}
+*/
+/* Pulsante di cancellazione */
+/*
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+*/
+
+/* Sezione prenotazioni */
+.reservation-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.reservation {
+    background-color: #f9f9f9;
+    border-left: 5px solid #ff6f61;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.reservation:hover {
+    background-color: #f1f1f1;
+}
+
+.reservation p {
+    margin: 8px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.reservation strong {
+    color: #111;
+}
+
+.cancel-btn {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #e0554a;
+}
+
+
+/* Pulsante logout */
+.logout-btn {
+    display: inline-block;
+    background-color: #999;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #777;
+}
+

@@ -89,3 +89,4 @@ document.getElementById('booking-form').addEventListener('submit', async functio
         });
     }
 });
+

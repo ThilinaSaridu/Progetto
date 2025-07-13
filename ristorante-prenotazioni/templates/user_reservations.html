@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Le mie Prenotazioni</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>Le mie prenotazioni future</h1>
+        <a href="/logout">Esci</a>
+    </header>
+    <main>
+         <div class="reservation-container">
+            {% if reservations %}
+                {% for r in reservations %}
+                    <div class="reservation">
+                        <p><strong>Nome:</strong> {{ r.name }}</p>
+                        <p><strong>Email:</strong> {{ r.email }}</p>
+                        <p><strong>Telefono:</strong> {{ r.phone }}</p>
+                        <p><strong>Data:</strong> {{ r.date }}</p>
+                        <p><strong>Ora:</strong> {{ r.time }}</p>
+                        <p><strong>Ospiti:</strong> {{ r.guests }}</p>
+                        <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Non hai prenotazioni future.</p>
+            {% endif %}
+        </div>
+    </main>
+    <script src="/static/js/reservations.js"></script>
+
+    <!-- Al fondo della tabella prenotazioni utente -->
+<div style="text-align: center; margin-top: 30px;">
+    <a href="{{ url_for('home') }}">
+        <button style="
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        ">
+            Torna alla Home
+        </button>
+    </a>
+</div>
+
+
+</body>
+</html>
+
