@@ -1,9 +1,9 @@
-/* Stile generale */
+/* Stile generale che imposta il margine a 0 e la famiglia di font per l'intera pagina */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #333; /* Colore principale del testo */
 }
 
 /* Intestazione */
@@ -16,13 +16,15 @@ header {
     color: white;
 }
 
+/* Contenitore principale per l'intestazione */
 header .logo h1 {
     margin: 0;
 }
 
+/* Barra di navigazione */
 header nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Allinea gli elementi in orizzontale */
     gap: 15px;
     margin: 0;
     padding: 0;
@@ -240,90 +242,6 @@ footer {
 .menu-item:nth-child(3) {
     background-image: url('/static/images/piatto3.jpg');
 }
-
-/*
-.reservations table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.reservations th, .reservations td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.reservations th {
-    background-color: #333;
-    color: white;
-}
-    */
-
-/* Container delle prenotazioni */
-/*
-.reservations-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    text-align: center;
-}
-*/
-/* Titolo */
-/*
-.reservations-container h2 {
-    color: #333;
-    margin-bottom: 25px;
-}
-*/
-/* Tabella */
-/*
-.reservations-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.reservations-table th,
-.reservations-table td {
-    border: 1px solid #ccc;
-    padding: 12px 15px;
-    text-align: center;
-}
-
-.reservations-table th {
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-}
-
-.reservations-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.reservations-table tr:hover {
-    background-color: #f1f1f1;
-}
-*/
-/* Pulsante di cancellazione */
-/*
-.delete-btn {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.delete-btn:hover {
-    background-color: #c0392b;
-}
-*/
 
 /* Sezione prenotazioni */
 .reservation-container {

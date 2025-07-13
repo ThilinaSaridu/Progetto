@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Tutte le Prenotazioni</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Collegamento al foglio css-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Incluzione della libreria SweetAlert2 per le finestre di dialogo -->
 </head>
 <body>
     <header>
         <h1>Gestione prenotazioni</h1>
-        <a href="/logout">Esci</a>
+        <a href="/logout">Esci</a> <!-- Link per effettuare il logout -->
     </header>
     <main>
          <div class="reservation-container">
-            {% if reservations %}
-                {% for r in reservations %}
+            {% if reservations %} <!-- Controlla se ci sono prenotazioni da mostrare -->
+                {% for r in reservations %} <!-- Inizio del ciclo for: itera su ogni prenotazione -->
                     <div class="reservation">
                         <p><strong>Nome:</strong> {{ r.name }}</p>
                         <p><strong>Email:</strong> {{ r.email }}</p>
@@ -22,19 +22,19 @@
                         <p><strong>Data:</strong> {{ r.date }}</p>
                         <p><strong>Ora:</strong> {{ r.time }}</p>
                         <p><strong>Ospiti:</strong> {{ r.guests }}</p>
-                        <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button>
+                        <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button> <!-- Pulsante per cancellare la prenotazione -->
                     </div>
                 {% endfor %}
-            {% else %}
+            {% else %} <!-- Se mnon ci sono prenotazioni compare un messaggio-->
                 <p>Non ci sono prenotazioni attive.</p>
             {% endif %}
         </div>
     </main>
-    <script src="/static/js/reservations.js"></script>
+    <script src="/static/js/reservations.js"></script> <!-- Collegamento al file JS che gestisce la cancellazione-->
 
-    <!-- Al fondo della tabella prenotazioni utente -->
+<!-- Sezione con bottone per tornare alla home-->
 <div style="text-align: center; margin-top: 30px;">
-    <a href="{{ url_for('home') }}">
+    <a href="{{ url_for('home') }}"> <!-- Link per tornare alla pagina iniziale -->
         <button style="
             padding: 10px 20px;
             font-size: 16px;

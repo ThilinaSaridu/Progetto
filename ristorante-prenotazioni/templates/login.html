@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Accedi alle Prenotazioni | La Buona Tavola</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Collegamento al foglio di stile-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <style>
-        body {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Libreria alert -->
+    
+    <!-- Inizio stili CSS incorporati -->
+    <style> 
+        body { 
             font-family: 'Inter', sans-serif;
             background: url('/static/images/background_login.png') no-repeat center center fixed;
             background-size: cover;
@@ -70,8 +72,8 @@
 
     <div class="login-container">
         <h2>Accedi alle Prenotazioni</h2>
-        {% if error %}
-            <div class="error">{{ error }}</div>
+        {% if error %} <!-- Blocco condizionale per visualizzare eventuali errori -->
+            <div class="error">{{ error }}</div> <!-- Visualizzazione meddaggio di errore -->
         {% endif %}
         <form method="POST" action="{{ url_for('login') }}">
             <input type="text" name="email_or_phone" placeholder="Email o Telefono" required>

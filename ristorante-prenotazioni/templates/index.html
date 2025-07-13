@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Impostazioni di base del documento html-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ristorante La Buona Tavola</title>
+    <title>Ristorante La Buona Tavola</title> <!-- Titolo della pagina-->
+    <!-- Collegamento al file CSS esterno-->
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <!-- Intestazione -->
+    <!-- Intestazione del sito con barra di navigazione-->
     <header>
         <div class="logo">
-            <h1>La Buona Tavola</h1>
+            <h1>La Buona Tavola</h1> <!-- Nome del ristorante -->
         </div>
         <nav>
             <ul>
+                <!-- Collegamenti di navigazione alle varie sezioni della pagina -->
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">Chi Siamo</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contatti</a></li>
-                <li><a href="/booking" class="btn">Prenota</a></li>
-                <li><a href="/login" class="btn">Visualizza Prenotazioni</a></li>
+                <li><a href="/booking" class="btn">Prenota</a></li> <!-- Link al form di prenotazione -->
+                <li><a href="/login" class="btn">Visualizza Prenotazioni</a></li> <!-- Link per visualizzare le prenotazioni (con login) -->
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Sezione introduttiva con immagine di fondo e testo -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Benvenuti a La Buona Tavola</h1>
@@ -32,13 +35,13 @@
         </div>
     </section>
 
-    <!-- Sezione Chi Siamo -->
+    <!-- Sezione informativa sul ristorante -->
     <section id="about" class="about">
         <h2>Chi Siamo</h2>
         <p>La Buona Tavola è sinonimo di tradizione e qualità. Dal 1980 offriamo piatti autentici preparati con passione e ingredienti freschi, garantendo un’esperienza indimenticabile ai nostri clienti.</p>
     </section>
 
-    <!-- Sezione Menu -->
+    <!-- Sezione Menuche presenta tre piatti del menu -->
     <section id="menu" class="menu">
         <h2>Il Nostro Menu</h2>
         <div class="menu-items">
@@ -57,7 +60,7 @@
         </div>
     </section>
 
-    <!-- Sezione Contatti -->
+    <!-- Sezione con le informazioni di contatto del ristorante -->
     <section id="contact" class="contact">
         <h2>Contatti</h2>
         <p>📍 Via Roma 123, Verona</p>

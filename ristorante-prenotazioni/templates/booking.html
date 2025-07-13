@@ -6,7 +6,7 @@
     <title>Prenota il tuo Tavolo</title>
     <!-- Link al file CSS di SweetAlert2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <!-- Link al tuo file CSS -->
+    <!-- Link al file CSS personalizzato -->
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
@@ -23,6 +23,8 @@
 
     <main class="booking-container">
         <h2>Prenota il tuo Tavolo</h2>
+        <!-- Form per l'invio dei dati di prenotazione -->
+        <!-- L'attributo action è impostato su 'javascript:void(0);' per impedire il comportamento predefinito -->
         <form id="booking-form" method="POST" action="javascript:void(0);">
             <label for="name">Nome Completo:</label>
             <input type="text" id="name" name="name" required>
@@ -36,6 +38,7 @@
             <label for="date">Data:</label>
             <input type="date" id="date" name="date" required>
 
+            <!-- Campo per selezionare l'orario tra gli slot disponibili -->
             <label for="time">Orario:</label>
             <select id="time" name="time" required>
                 <option value="">-- Seleziona un orario --</option>
@@ -71,7 +74,7 @@
 
     <!-- Link al file JavaScript di SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Link al tuo file JavaScript -->
+    <!-- Link al file JavaScript personalizzato-->
     <script src="/static/js/script.js"></script>
 </body>
 </html>

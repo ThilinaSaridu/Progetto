@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Le mie Prenotazioni</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Collegamento al foglio di stile principale -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Libreria per alert -->
 </head>
 <body>
     <header>
         <h1>Le mie prenotazioni future</h1>
-        <a href="/logout">Esci</a>
+        <a href="/logout">Esci</a> <!-- Link per il logout -->
     </header>
     <main>
          <div class="reservation-container">
-            {% if reservations %}
-                {% for r in reservations %}
+            {% if reservations %} <!-- Controllo se ci sono prenotazioni -->
+                {% for r in reservations %} <!-- Loop attraverso le prenotazioni -->
                     <div class="reservation">
                         <p><strong>Nome:</strong> {{ r.name }}</p>
                         <p><strong>Email:</strong> {{ r.email }}</p>
@@ -31,9 +31,10 @@
             {% endif %}
         </div>
     </main>
-    <script src="/static/js/reservations.js"></script>
+    <script src="/static/js/reservations.js"></script> <!-- Script per la gestione delle prenotazioni -->
 
-    <!-- Al fondo della tabella prenotazioni utente -->
+
+<!-- Pulsante per tornare alla home -->
 <div style="text-align: center; margin-top: 30px;">
     <a href="{{ url_for('home') }}">
         <button style="
