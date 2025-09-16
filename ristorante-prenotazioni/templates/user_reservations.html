@@ -2,10 +2,22 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
+    <!-- Impostazione di base del documento htlm -->
     <meta charset="UTF-8">
+
+    <!-- Imposto la pagina in modo che si adatti in base allo schermo del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titolo della pagina -->
     <title>Le mie Prenotazioni</title>
-    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Collegamento al foglio di stile principale -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Libreria per alert -->
+
+    <!-- Collegamento al foglio di stile principale -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!-- Libreria per alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
     <header>
@@ -23,7 +35,17 @@
                         <p><strong>Data:</strong> {{ r.date }}</p>
                         <p><strong>Ora:</strong> {{ r.time }}</p>
                         <p><strong>Ospiti:</strong> {{ r.guests }}</p>
-                        <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button>
+                        
+                        <button class="edit-btn"
+                                data-id="{{ r.id }}"
+                                data-name="{{ r.name }}"
+                                data-phone="{{ r.phone }}"
+                                data-date="{{ r.date }}"
+                                data-time="{{ r.time }}"
+                                data-guests="{{ r.guests }}">Modifica</button> <!-- Pulsante per modificare la prenotazione-->
+
+                        <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button> <!-- Pulsante per cancellare la prenotazione -->
+                        
                     </div>
                 {% endfor %}
             {% else %}
@@ -35,19 +57,9 @@
 
 
 <!-- Pulsante per tornare alla home -->
-<div style="text-align: center; margin-top: 30px;">
-    <a href="{{ url_for('home') }}">
-        <button style="
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        ">
-            Torna alla Home
-        </button>
+<div class="home-button-container">
+    <a href="{{ url_for('home') }}" class="btn btn-dark btn-home">
+        Torna alla Home
     </a>
 </div>
 

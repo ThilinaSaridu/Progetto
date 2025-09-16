@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
+    <!-- Impostazioni di base del documento html-->
     <meta charset="UTF-8">
+
+    <!-- Imposto la pagina in modo che si adatti in base allo schermo del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titolo della pagina -->
     <title>Tutte le Prenotazioni</title>
-    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Collegamento al foglio css-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Incluzione della libreria SweetAlert2 per le finestre di dialogo -->
+
+    <!-- Collegamento al foglio CSS -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!-- Incluzione della libreria SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
-    <header>
-        <h1>Gestione prenotazioni</h1>
-        <a href="/logout">Esci</a> <!-- Link per effettuare il logout -->
-    </header>
+    
     <main>
          <div class="reservation-container">
             {% if reservations %} <!-- Controlla se ci sono prenotazioni da mostrare -->
@@ -22,10 +31,20 @@
                         <p><strong>Data:</strong> {{ r.date }}</p>
                         <p><strong>Ora:</strong> {{ r.time }}</p>
                         <p><strong>Ospiti:</strong> {{ r.guests }}</p>
+
+                        <button class="edit-btn"
+                                data-id="{{ r.id }}"
+                                data-name="{{ r.name }}"
+                                data-phone="{{ r.phone }}"
+                                data-date="{{ r.date }}"
+                                data-time="{{ r.time }}"
+                                data-guests="{{ r.guests }}">Modifica</button> <!-- Pulsante per modificare la prenotazione -->
+
                         <button class="cancel-btn" data-id="{{ r.id }}">Cancella</button> <!-- Pulsante per cancellare la prenotazione -->
+
                     </div>
                 {% endfor %}
-            {% else %} <!-- Se mnon ci sono prenotazioni compare un messaggio-->
+            {% else %} <!-- Se non ci sono prenotazioni compare il messaggio -->
                 <p>Non ci sono prenotazioni attive.</p>
             {% endif %}
         </div>
@@ -33,19 +52,9 @@
     <script src="/static/js/reservations.js"></script> <!-- Collegamento al file JS che gestisce la cancellazione-->
 
 <!-- Sezione con bottone per tornare alla home-->
-<div style="text-align: center; margin-top: 30px;">
-    <a href="{{ url_for('home') }}"> <!-- Link per tornare alla pagina iniziale -->
-        <button style="
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        ">
-            Torna alla Home
-        </button>
+<div class="home-button-container">
+    <a href="{{ url_for('home') }}" class="btn btn-dark btn-home">
+        Torna alla Home
     </a>
 </div>
 

@@ -308,3 +308,101 @@ footer {
     background-color: #777;
 }
 
+.edit-btn{
+  background:#3498db; color:#fff; border:none;
+  padding:10px 16px; border-radius:5px; cursor:pointer;
+  font-weight:bold; margin-left:8px; transition:background .2s ease;
+}
+.edit-btn:hover{ background:#2c80b9; }
+
+
+/* ========== STILI PAGINA LOGIN ========== */
+body.login-page { 
+            font-family: 'Inter', sans-serif;
+            background: url('/static/images/background_login.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b;
+        }
+
+        .back-home {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+
+        /*Torna al home*/
+/* Contenitore centrato */
+.home-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Stile base pulsanti/link */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+/* Variante scura */
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  background-color: #111;
+}
+
+/* Stile specifico per il pulsante home (se vuoi personalizzarlo ulteriormente) */
+.btn-home {
+  font-weight: bold;
+}
