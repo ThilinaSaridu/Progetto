@@ -1,4 +1,4 @@
-/* Stile generale che imposta il margine a 0 e la famiglia di font per l'intera pagina */
+/* =========== STILE GENERALE DELLA PAGINA ========== */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
     color: #333; /* Colore principale del testo */
 }
 
-/* Intestazione */
+/* =========== INTESTAZIONE ========== */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,15 +16,15 @@ header {
     color: white;
 }
 
-/* Contenitore principale per l'intestazione */
+/* ========== CONTENITORE PRINCIPALE PER L'INTESTAZIONE ========== */
 header .logo h1 {
     margin: 0;
 }
 
-/* Barra di navigazione */
+/* ========== BARRA DI NAVIGAZIONE ========== */
 header nav ul {
     list-style: none;
-    display: flex; /* Allinea gli elementi in orizzontale */
+    display: flex;
     gap: 15px;
     margin: 0;
     padding: 0;
@@ -49,8 +49,8 @@ header nav ul li a:hover {
     background-color: #e55a50;
 }
 
-/* Hero Section */
-.hero {
+/* ========== SEZIONE HOME ========== */
+.home {
     background-image: url('/static/images/background.jpg');
     background-size: cover;
     background-position: center;
@@ -59,19 +59,19 @@ header nav ul li a:hover {
     padding: 100px 20px;
 }
 
-.hero-content {
+.home-content {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
 }
 
-.hero h1 {
+.home h1 {
     font-size: 2.5rem;
     margin: 0;
 }
 
-/* Sezioni */
+/* ========== SEZIONI ========== */
 section {
     padding: 50px 20px;
     text-align: center;
@@ -95,7 +95,7 @@ section {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
     text-align: center;
     background-color: #333;
@@ -103,9 +103,7 @@ footer {
     padding: 20px;
 }
 
-/* Stile per la pagina Booking */
-
-/* Modulo di Prenotazione */
+/* ========== MODULO DI PRENOTAZIONE =========== */
 .booking-container {
     max-width: 800px;
     margin: 50px auto;
@@ -160,7 +158,7 @@ footer {
     background-color: #e55a50;
 }
 
-/* Messaggio di risposta */
+/* ========== MESSAGGIO DI RISPOSTA ========== */
 .response-message {
     margin-top: 20px;
     font-size: 1.2rem;
@@ -168,7 +166,7 @@ footer {
     color: green;
 }
 
-/* Stile per la sezione menu */
+/* ========== STILE PER LA SEZIONE MENU =========== */
 .menu {
     padding: 50px 20px;
     text-align: center;
@@ -230,20 +228,20 @@ footer {
     border-radius: 10px;
 }
 
-/* Aggiunta degli sfondi per i piatti */
+/* ========== AGGIUNTA DEGLI SFONDI DEI PIATTI========= */
 .menu-item:nth-child(1) {
-    background-image: url('/static/images/piatto1.jpg');
+    background-image: url('../images/piatto1.jpg');
 }
 
 .menu-item:nth-child(2) {
-    background-image: url('/static/images/piatto2.jpg');
+    background-image: url('../images/piatto2.jpg');
 }
 
 .menu-item:nth-child(3) {
-    background-image: url('/static/images/piatto3.jpg');
+    background-image: url('../images/piatto3.jpg');
 }
 
-/* Sezione prenotazioni */
+/* ========== SESIONE PRENOTAZIONE ========== */
 .reservation-container {
     max-width: 800px;
     margin: 40px auto;
@@ -292,22 +290,7 @@ footer {
     background-color: #e0554a;
 }
 
-
-/* Pulsante logout */
-.logout-btn {
-    display: inline-block;
-    background-color: #999;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.logout-btn:hover {
-    background-color: #777;
-}
-
+/* ========== PULSANTE MODIFICA ========== */
 .edit-btn{
   background:#3498db; color:#fff; border:none;
   padding:10px 16px; border-radius:5px; cursor:pointer;
@@ -373,15 +356,7 @@ body.login-page {
             text-decoration: underline;
         }
 
-
-        /*Torna al home*/
-/* Contenitore centrato */
-.home-button-container {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* Stile base pulsanti/link */
+/* ========== STILE BASE PULSANTI/LINK ========== */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -393,7 +368,7 @@ body.login-page {
   transition: background-color 0.2s ease;
 }
 
-/* Variante scura */
+/* ========== VARIANTE OSCURA ========== */
 .btn-dark {
   background-color: #333;
   color: #fff;
@@ -402,7 +377,12 @@ body.login-page {
   background-color: #111;
 }
 
-/* Stile specifico per il pulsante home (se vuoi personalizzarlo ulteriormente) */
+/* ========== PULSANTE HOME ======= */
 .btn-home {
   font-weight: bold;
+}
+
+.home-button-container {
+  text-align: center;
+  margin-top: 30px;
 }
